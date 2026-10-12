@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.14.7-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
+![Tests](https://img.shields.io/badge/tests-passing-green.svg)
+
 # CloudWarden
 
 A read-only security watchdog for small AWS and Azure accounts. It scans for the mistakes that most often get small teams breached, and tells you how to fix each one in plain language.
