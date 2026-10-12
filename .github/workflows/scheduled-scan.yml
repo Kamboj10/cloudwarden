@@ -1,0 +1,33 @@
+name: Weekly cloud scan
+
+# Template: runs CloudWarden against YOUR OWN sandbox account every Monday.
+# Setup steps (OIDC role, secret) are in docs/SETUP.md.
+
+on:
+  schedule:
+    - cron: "30 3 * * 1" # Mondays 03:30 UTC
+  workflow_dispatch:
+
+permissions:
+  id-token: write # needed to sign in to AWS with OIDC
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ap-south-1
+      - run: pip install -e .
+      - name: Scan (never fail the job here, just report)
+        run: cloudwarden --aws --region ap-south-1 --format html --output report.html --fail-on none
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloudwarden-report
+          path: report.html
