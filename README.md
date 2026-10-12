@@ -114,10 +114,6 @@ Prowler, ScoutSuite and cloud-audit are broader and more mature. Prowler covers 
 
 Add screenshots of a real report and your before-and-after evidence here.
 
-## What I learned
-
-_Write 4 to 5 honest bullets: what was hard, which check surprised you, what false positives you found, what you would add next._
-
 ## License
 
 MIT
