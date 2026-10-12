@@ -29,7 +29,7 @@ Each finding carries a reference to the matching area of the CIS Foundations Ben
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-handle>/cloudwarden.git
+git clone https://github.com/Kamboj10/cloudwarden.git
 cd cloudwarden
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -e ".[azure]"        # drop [azure] if you only scan AWS
