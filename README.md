@@ -106,14 +106,6 @@ Prowler, ScoutSuite and cloud-audit are broader and more mature. Prowler covers 
 - [ ] More checks: RDS public access, CloudTrail enabled, Azure VM disk encryption
 - [ ] Slack and Telegram alerts
 
-## Results (fill these in with real numbers)
-
-| Accounts scanned | Findings | Critical / High | Fixed |
-|------------------|----------|-----------------|-------|
-| _N_ | _N_ | _N_ | _N_ |
-
-Add screenshots of a real report and your before-and-after evidence here.
-
 ## License
 
 MIT
